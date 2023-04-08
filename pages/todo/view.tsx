@@ -11,7 +11,7 @@ type Props = {
 // export async function getServerSideProps() {
 
 //   }
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const todos = await getAllTodos();
 
   return {
