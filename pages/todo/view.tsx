@@ -2,6 +2,7 @@ import React from 'react'
 import TodoLayout from '@/components/Layout/TodoLayout';
 import TodoList from '@/components/Todo/TodoList/TodoList';
 import { Todo } from '@/components/Todo/todo.type';
+import { getAllTodos } from '@/lib/todos';
 
 type Props = {
   todos: Todo[]
@@ -11,12 +12,11 @@ type Props = {
 
 //   }
 export async function getStaticProps() {
-  const response = await fetch("http://localhost:4000/todos");
-  const result = await response.json();
+  const todos = await getAllTodos();
 
   return {
     props: {
-      todos: result.todos
+      todos: todos
     }
   }
 }
