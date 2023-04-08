@@ -13,12 +13,12 @@ type Props = {
 //   }
 export async function getServerSideProps() {
   // const todos = await getAllTodos();
-  const response = await fetch("http://localhost:4000/todos");
-  const result = await response.json();
+  // const response = await fetch("http://localhost:4000/todos");
+  // const result = await response.json();
 
   return {
     props: {
-      todos: result.todos
+      todos: [] // result.todos
     }
   }
 }
