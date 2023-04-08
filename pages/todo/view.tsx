@@ -29,4 +29,4 @@ const Todos = ({ todos }: Props) => {
   )
 }
 
-// export default Todos;
+export default Todos;
