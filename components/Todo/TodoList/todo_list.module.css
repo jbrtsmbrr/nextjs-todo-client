@@ -7,5 +7,30 @@
 .todo-item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 24px 48px;
+  gap: 12px;
+}
+
+.label {
+  cursor: pointer;
+  flex: 1;
+}
+
+.label::selection {
+  background: none;
+}
+
+.input {
+  transform: translateY(1.5px);
+}
+
+.remove {
+  color: red;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.grey {
+  color: rgb(143 143 143);
 }
